@@ -1,0 +1,197 @@
+
+
+
+.about-us-page {
+  background-color: #0c1b2a;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 80px 2% 60px;
+  overflow-x: hidden;
+}
+
+
+/* INTRO SECTION */
+.text-section.right {
+  max-width: 1000px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+.text-section.right h2 {
+  color: #ff2f7e;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.text-section.right p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* ROADMAP */
+.roadmap-vertical {
+  display: flex;
+  flex-direction: row; /* Changed to row for horizontal layout */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  position: relative;
+  gap: 40px; /* Adjust gap between steps */
+  margin-bottom: 80px;
+}
+
+.roadmap-step {
+  position: relative;
+  text-align: center;
+}
+
+/* Adjust image styling */
+.roadmap-step img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.roadmap-step img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px black;
+}
+
+/* Step label styled like a tag, placed below the image */
+.step-label {
+  position: relative;
+  top: 10px; /* Move the label below the image */
+  margin-top: 10px; /* Add space between the image and label */
+  display: inline-block; /* Make the label act like a tag */
+  background-color: #ff2f7e;
+  padding: 5px 20px; /* Adjust padding for tag-like appearance */
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: capitalize; /* Make text look more like a tag */
+}
+
+/* Adjust label for even steps */
+.roadmap-step:nth-child(even) .step-label {
+  left: auto;
+  right: auto; /* Center the label */
+}
+
+/* Horizontal dotted line (for horizontal layout) */
+.curve-line.vertical {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 100px; /* Horizontal dotted line */
+  border-top: 3px dotted #ffffff66;
+  margin-left: 20px; /* Space between the image and line */
+  transform: translateY(-50%);
+}
+
+
+/* FEATURES */
+.features {
+  text-align: left;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto 80px;
+}
+
+.features h2 {
+  color: #ff2f7e;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  line-height: 1.6;
+  padding-left: 25px;
+  position: relative;
+}
+
+.features li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #2d9cdb;
+}
+
+/* TEAM */
+.team {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.team h2 {
+  color: #ff2f7e;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.team p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* Team member container */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual member card */
+.member {
+  width: 160px;
+  text-align: center;
+}
+
+/* Team member image */
+.member img {
+  width: 180px; 
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0c1b2a;
+  box-shadow: 0 4px 12px black;
+  margin-bottom: 12px;
+}
+
+/* Member name */
+.member h4 {
+  margin: 8px 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff2f7e;
+}
+.member img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px black;
+}
+
+/* Member role */
+.member p {
+  font-size: 14px;
+  color: #dcdcdc;
+  margin: 0;
+}
+
+
+

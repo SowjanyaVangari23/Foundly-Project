@@ -1,0 +1,189 @@
+.modal-container {
+  background-color: #0c1b2a;
+  border-radius: 10px;
+  width: 90%; /* Increased width to make it wider */
+  max-width: 600px; /* Max width for larger screens */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 95vh;
+  padding: 16px 20px; /* Added more padding */
+}
+
+.modal-header {
+  padding: 10px 12px;
+  border-bottom: 1px solid #0c1b2a;
+  display: flex;
+
+}
+
+.modal-header h2 {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap to create space between the fields */
+  background-color: #0c1b2a;
+}
+
+.modal-form label {
+  font-weight: 500;
+  color: #b0c4de;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.modal-form input[type="text"],
+.modal-form input[type="file"],
+.modal-form textarea {
+  min-height: 50px;
+  width: 100%;
+  padding: 10px 15px; /* Increased padding */
+  background-color: #0c1b2a;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modal-form input[type="file"] {
+  padding: 10px;
+  border: 2px dashed white;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #b0c4de;
+  cursor: pointer;
+  height: 50px; /* Reduced height of photo proof */
+}
+
+.modal-form input[type="text"]::placeholder,
+.modal-form textarea::placeholder {
+  color: #b0c4de;
+}
+
+.modal-form textarea {
+  resize: vertical;
+  min-height: 30px;
+  max-height: 100px;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 8px 25px;
+  border-radius: 25px;
+  border: 1.5px solid white;
+  margin-right: 15px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 200px;
+  text-align: left;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: #ff1472;
+  width: 20px;
+  height: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 20px;
+  border-top: 1px solid #0a2c44;
+  flex-wrap: wrap;
+}
+
+.form-buttons {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.form-buttons .cancel-btn {
+  padding: 12px 35px;
+  border: #ff1472 solid 2px;
+  background-color: transparent;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submit-btn {
+  padding: 12px 35px;
+  border: none;
+  background-color: #ff1472;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form-buttons button[type="submit"]:hover {
+  background-color: #e01365;
+}
+
+.form-buttons button[type="button"] {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #ff1472;
+}
+
+.form-buttons button[type="button"]:hover {
+  background-color: #26182c;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.handover-to-security {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.handover-to-security input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  background-color: #0c1b2a;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.handover-to-security input::placeholder {
+  color: #b0c4de;
+}

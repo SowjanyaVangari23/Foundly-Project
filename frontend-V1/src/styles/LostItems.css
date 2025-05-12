@@ -1,0 +1,293 @@
+/* Items Page Layout */
+.items-page {
+  padding: 100px 20px 20px;
+  background-color: #0c1b2a;
+  color: #fff;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Title */
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Search */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #0d3b57;
+  padding: 8px 12px 0px 30px;
+  border-radius: 8px;
+  width: 300px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.search-input {
+  padding: 12px 16px 12px 20px;
+  width: 100%;
+  margin-right: 0;
+  border: none;
+  background-color: transparent;
+  color: white !important;
+  font-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 18px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.5 19l-5-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+.search-input::placeholder {
+  color: #ccc;
+}
+
+/* Filter Button */
+.filter-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.filter-icon-button:hover {
+  background-color: #333;
+  transform: scale(1.1);
+  color: #ccc;
+}
+
+/* Filters */
+.filters-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.filters-inline select,
+.filters-inline input[type="text"],
+.filters-inline input[type="date"] {
+  padding: 8px 12px;
+  border: 1px solid #fff;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50px;
+  font-size: 13px;
+  outline: none;
+  min-width: 120px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5H7z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
+
+.filters-inline input[type="date"] {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5H7z'/></svg>");
+}
+
+.filters-inline input::placeholder {
+  color: #555;
+}
+
+.filters-inline button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #ff007a;
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filters-inline button:hover {
+  background-color: #e6006b;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+
+ .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  color: #fff;
+}
+
+.flip-card-front {
+  background-color: #000000dc;
+}
+
+.flip-card-back {
+  background-color: #000000;
+  transform: rotateY(180deg);
+  
+  overflow: hidden;
+}
+
+/* Card Content */
+.card-title {
+  color: #ff007a;
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.flip-card-back h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.flip-card-back p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.description-text {
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 6px;
+  padding-top: 8px;
+  font-style: italic;
+}
+
+.status-text {
+  font-weight: bold;
+  color: #ff007a;
+  margin: 6px 0;
+}
+
+.item-name-bottom {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+/* ✅ Handover button styled */
+.handover-button {
+  background-color: #ff007a;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* ✅ Uniform image size */
+.card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.no-image {
+  width: 100%;
+  height: 300px;
+  background-color: #ccc;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+/* ✅ Table border removed */
+.info-table,
+.item-details-table {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-collapse: collapse;
+  border: none;
+}
+
+.info-table td,
+.item-details-table td {
+  padding: 4px 8px;
+  vertical-align: top;
+  font-size: 0.9rem;
+  border: none;
+}
+.info-table tr:nth-child(even),
+.info-table tr:nth-child(odd),
+.item-details-table tr:nth-child(even),
+.item-details-table tr:nth-child(odd) {
+  background-color: transparent !important;
+}
+
+.info-table tr:hover,
+.item-details-table tr:hover {
+  background-color: transparent !important;
+}
+
+.scrollable-description::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-description::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+}
